@@ -5,7 +5,7 @@ import {
   User, Settings, CreditCard, HelpCircle, LogOut,
   Camera, Mail, Phone, Shield, Crown, Edit3, Save,
   CheckCircle2, Clock, Radio, Package, AlertTriangle,
-  ArrowUpRight, Star,
+  ArrowUpRight, Star, Hash,
 } from "lucide-react";
 
 function Portal({ children }) {
@@ -247,6 +247,8 @@ export default function Topbar({
   credits        = "12,450",
   userName       = "Arjun Singh",
   userRole       = "Premium User",
+  uniqueId       = "NFC-AS-20481",
+  nfcCount       = 20,
   notifications  = 3,
   onTopUp,
   onSearch,
@@ -411,6 +413,16 @@ export default function Topbar({
                   <div className="text-white text-sm font-bold leading-tight">{userName}</div>
                   <div className="text-red-100 text-[10px] flex items-center gap-1"><Crown className="w-3 h-3 text-amber-300" />{userRole}</div>
                 </div>
+              </div>
+              {/* Unique ID + NFC count */}
+              <div className="flex items-center gap-2 mt-2.5 pt-2 border-t border-white/15">
+                <span className="flex items-center gap-1 text-white/90 text-[10px] font-semibold">
+                  <Hash className="w-3 h-3 text-white/70" />{uniqueId}
+                </span>
+                <span className="text-white/30 text-[10px]">•</span>
+                <span className="flex items-center gap-1 text-white/90 text-[10px] font-semibold">
+                  <Radio className="w-3 h-3 text-white/70" />{nfcCount} NFC Cards
+                </span>
               </div>
             </div>
             {/* Credits mini */}

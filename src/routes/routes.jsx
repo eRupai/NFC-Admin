@@ -20,6 +20,16 @@ import ReviewsFeedbackPage    from "../pages/Reviewsfeedbackpage";
 import AdminSettingsPage      from "../pages/AdminSettingsPage";
 import AdminBillingPage       from "../pages/AdminBillingPage";
 import AdminHelpSupportPage   from "../pages/AdminHelpSupportPage";
+import UserManagementPage from "../pages/Usermanagement";
+import MultiVerificationPage from "../pages/Multifactorverification";
+import DoorManagementPage from "../pages/Doormanagement";
+import EntryExitTrackingPage from "../pages/Entryexittracking";
+import ActivityTrackingPage from "../pages/Activitytracking";
+import AuditTrailPage from "../pages/Audittrail";
+import TrackingCodeSystemPage from "../pages/Trackingcodesystem";
+import AlertManagementPage from "../pages/Alertmanagement";
+import ActivityExposureDashboardPage from "../pages/Activityexposuredashboard";
+import Courthearingmanagement  from "../pages/Courthearingmanagement";
 
 export const ROUTES = {
   dashboard:          (nav) => <Dashboard />,
@@ -43,6 +53,72 @@ export const ROUTES = {
   "admin-settings":   (nav) => <AdminSettingsPage      onMenuClick={() => nav("admin-settings")}    navigate={nav} />,
   "admin-billing":    (nav) => <AdminBillingPage       onMenuClick={() => nav("admin-billing")}     navigate={nav} />,
   "admin-help":       (nav) => <AdminHelpSupportPage   onMenuClick={() => nav("admin-help")}        navigate={nav} />,
+  "user": (nav) => (
+  <UserManagementPage
+    onMenuClick={() => nav("user")}
+    navigate={nav}
+  />
+),
+
+"verification": (nav) => (
+  <MultiVerificationPage
+    onMenuClick={() => nav("verification")}
+    navigate={nav}
+  />
+),
+
+"door": (nav) => (
+  <DoorManagementPage
+    onMenuClick={() => nav("door")}
+    navigate={nav}
+  />
+),
+"entry": (nav) => (
+  <EntryExitTrackingPage
+    onMenuClick={() => nav("entry")}
+    navigate={nav}
+  />
+),
+
+"tracking": (nav) => (
+  <ActivityTrackingPage
+    onMenuClick={() => nav("tracking")}
+    navigate={nav}
+  />
+),
+
+"audit": (nav) => (
+  <AuditTrailPage
+    onMenuClick={() => nav("audit")}
+    navigate={nav}
+  />
+),
+
+"code": (nav) => (
+  <TrackingCodeSystemPage
+    onMenuClick={() => nav("code")}
+    navigate={nav}
+  />
+),
+"alertM": (nav) => (
+  <AlertManagementPage
+    onMenuClick={() => nav("alertM")}
+    navigate={nav}
+  />
+),
+
+"activitydash": (nav) => (
+  <ActivityExposureDashboardPage
+    onMenuClick={() => nav("activitydash")}
+    navigate={nav}
+  />
+),
+"court": (nav) => (
+  <Courthearingmanagement
+    onMenuClick={() => nav("court")}
+    navigate={nav}
+  />
+),
 };
 
 export const DEFAULT_ROUTE = "dashboard";

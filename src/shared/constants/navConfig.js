@@ -17,7 +17,19 @@ import {
   HelpCircle,
   Mail,
   Star,
+  Verified,
+  DoorClosed,
+  TrashIcon,
+  TriangleIcon,
+  Code,
+  User,
+  ExternalLinkIcon,
+  AlertTriangle,
+  BookDashed,
+  DessertIcon,
 } from "lucide-react";
+import TrackingCodeSystem from "../../pages/Trackingcodesystem";
+import { Activity } from "react";
 
 export const NAV = [
   {
@@ -127,6 +139,29 @@ export const NAV = [
       { icon: HelpCircle, label: "Help & Support", id: "help" },
       { icon: Mail, label: "Contact Us", id: "contact" },
       { icon: Star, label: "Reviews & Feedback", id: "reviews-feedback" },
+    ],
+  },
+  {
+    section: "Verification",
+    items: [
+      { icon: Users, label: "User Managment", id: "user" },
+      { icon: Verified, label: "Multi Verification", id: "verification" },
+      { icon: DoorClosed, label: "Door Management", id: "door" },
+      { icon: ExternalLinkIcon, label: "Entryexittracking", id: "entry" },
+      { icon: User, label: "Activitytracking", id: "tracking" },
+      { icon: TriangleIcon, label: "Audittrail", id: "audit" },
+      { icon: Code, label: "Trackingcodesystem", id: "code" },
+      { icon: AlertTriangle, label: "Alertmanagement", id: "alertM" },
+      {
+        icon: BookDashed,
+        label: "Activityexposuredashboard",
+        id: "activitydash",
+      },
+      {
+        icon: DessertIcon,
+        label: "Courthearingmanagement",
+        id: "court",
+      },
     ],
   },
   {
